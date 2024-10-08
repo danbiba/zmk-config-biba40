@@ -30,10 +30,10 @@ RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5)                 RC(4,6) RC(4,7) 
         wakeup-source;
         diode-direction = "col2row";
         row-gpios
-            = <&pro_micro D2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row A from the schematic file
-            , <&pro_micro D3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row B from the schematic file
-            , <&pro_micro D4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row C from the schematic file
-            , <&pro_micro D5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row D from the schematic file
+            = <&pro_micro d2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row A from the schematic file
+            , <&pro_micro d3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row B from the schematic file
+            , <&pro_micro d4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row C from the schematic file
+            , <&pro_micro d5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row D from the schematic file
             ;
 
     };
