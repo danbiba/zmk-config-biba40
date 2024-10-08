@@ -1,0 +1,16 @@
+if SHIELD_BIBA40_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Biba40"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_BIBA40_LEFT || SHIELD_BIBA40_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

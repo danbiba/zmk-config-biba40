@@ -1,0 +1,6 @@
+config SHIELD_BIBA40_LEFT
+    def_bool $(shields_list_contains,biba40_left)
+
+config SHIELD_BIBA40_RIGHT
+    def_bool $(shields_list_contains,biba40_right)
+
