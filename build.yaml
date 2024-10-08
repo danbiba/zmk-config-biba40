@@ -19,6 +19,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: biba40_left
+    shield: helix_left
   - board: nice_nano_v2
-    shield: biba40_right
+    shield: helix_right
