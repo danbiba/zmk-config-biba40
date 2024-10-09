@@ -7,8 +7,5 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-config-biba40
-      path: config
-      revision: main
   self:
     path: config
