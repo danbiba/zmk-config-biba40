@@ -2,10 +2,20 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: custom_shield
+      url-base: https://github.com/danbiba
+
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+
+    - name: biba_40_shield
+      remote: custom_shield
+      revision: main
+      path: biba_40_shield  # Optional: set the path where you want to clone the shield
+      import: .  # Adjust if there's a specific west.yml in the shield repo you want to include
+
   self:
     path: config
