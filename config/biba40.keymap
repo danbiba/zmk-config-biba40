@@ -40,6 +40,15 @@ As such, those are in use within the default layer at this time.*/
         };
     };
 
+    macros {
+        onenote: onenote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(K) &kp LC(V) &kp ENTER>;
+            label = "ONENOTE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
