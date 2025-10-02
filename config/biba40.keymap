@@ -38,6 +38,31 @@ As such, those are in use within the default layer at this time.*/
             bindings = <&kp LC(DEL)>;
             key-positions = <9 10 11>;
         };
+
+        LeftWord {
+            bindings = <&kp LC(LEFT_ARROW)>;
+            key-positions = <46 45>;
+        };
+
+        RightWord {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <47 46>;
+        };
+
+        Home {
+            bindings = <&kp LC(HOME)>;
+            key-positions = <33 34>;
+        };
+
+        End {
+            bindings = <&kp LC(END)>;
+            key-positions = <34 35>;
+        };
+
+        EraseLine {
+            bindings = <&EraseLine>;
+            key-positions = <34 46>;
+        };
     };
 
     macros {
@@ -46,6 +71,13 @@ As such, those are in use within the default layer at this time.*/
             #binding-cells = <0>;
             bindings = <&kp LC(K) &kp LC(V) &kp ENTER>;
             label = "ONENOTE";
+        };
+
+        EraseLine: EraseLine {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END) &kp DELETE>;
+            label = "ERASELINE";
         };
     };
 
