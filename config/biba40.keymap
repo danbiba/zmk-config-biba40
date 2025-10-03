@@ -93,6 +93,51 @@ As such, those are in use within the default layer at this time.*/
             bindings = <&kp UNDER>;
             key-positions = <0 1 2>;
         };
+
+        One {
+            bindings = <&kp NUMBER_1>;
+            key-positions = <0 1>;
+        };
+
+        Two {
+            bindings = <&kp NUMBER_2>;
+            key-positions = <1 2>;
+        };
+
+        Three {
+            bindings = <&kp NUMBER_3>;
+            key-positions = <2 3>;
+        };
+
+        Four {
+            bindings = <&kp NUMBER_4>;
+            key-positions = <4 5>;
+        };
+
+        Five {
+            bindings = <&kp N5>;
+            key-positions = <5 6>;
+        };
+
+        Seven {
+            bindings = <&kp N7>;
+            key-positions = <6 7>;
+        };
+
+        Eight {
+            bindings = <&kp N8>;
+            key-positions = <7 8>;
+        };
+
+        Nine {
+            bindings = <&kp N9>;
+            key-positions = <9 10>;
+        };
+
+        Zero {
+            bindings = <&kp N0>;
+            key-positions = <10 11>;
+        };
     };
 
     macros {
@@ -167,10 +212,10 @@ As such, those are in use within the default layer at this time.*/
             // |          |          |          |          |          |          |                                          |          |          |          |          |          |          |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &soft_off
-&bt BT_NXT  &out OUT_TOG    &out OUT_USB  &out OUT_BLE  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_PRV  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans        &trans        &trans        &trans        &soft_off
+&bt BT_NXT  &out OUT_TOG              &out OUT_USB          &out OUT_BLE       &trans        &trans        &trans      &trans        &trans        &trans        &trans        &trans
+&bt BT_PRV  &bt BT_CLR_ALL            &trans                &trans             &trans        &trans        &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans      &trans                    &trans                &trans             &trans        &trans        &trans      &trans        &trans        &trans        &trans        &trans
             >;
         };
 
