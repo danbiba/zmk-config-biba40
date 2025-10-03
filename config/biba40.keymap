@@ -95,48 +95,53 @@ As such, those are in use within the default layer at this time.*/
         };
 
         One {
-            bindings = <&kp NUMBER_1>;
+            bindings = <&kp N1>;
             key-positions = <0 1>;
         };
 
         Two {
-            bindings = <&kp NUMBER_2>;
+            bindings = <&kp N2>;
             key-positions = <1 2>;
         };
 
         Three {
-            bindings = <&kp NUMBER_3>;
+            bindings = <&kp N3>;
             key-positions = <2 3>;
         };
 
         Four {
-            bindings = <&kp NUMBER_4>;
-            key-positions = <4 5>;
+            bindings = <&kp N4>;
+            key-positions = <4 3>;
         };
 
         Five {
             bindings = <&kp N5>;
-            key-positions = <5 6>;
+            key-positions = <4 5>;
+        };
+
+        Six {
+            bindings = <&kp N6>;
+            key-positions = <6 5>;
         };
 
         Seven {
-            bindings = <&kp N7>;
-            key-positions = <6 7>;
+            bindings = <&kp NUMBER_7>;
+            key-positions = <7 6>;
         };
 
         Eight {
-            bindings = <&kp N8>;
-            key-positions = <7 8>;
+            bindings = <&kp NUMBER_8>;
+            key-positions = <8 7>;
         };
 
         Nine {
-            bindings = <&kp N9>;
-            key-positions = <9 10>;
+            bindings = <&kp NUMBER_9>;
+            key-positions = <9 8>;
         };
 
         Zero {
-            bindings = <&kp N0>;
-            key-positions = <10 11>;
+            bindings = <&none>;
+            key-positions = <9 10>;
         };
     };
 
