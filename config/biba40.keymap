@@ -111,7 +111,7 @@ As such, those are in use within the default layer at this time.*/
 
         Four {
             bindings = <&kp N4>;
-            key-positions = <4 3>;
+            key-positions = <3 4>;
         };
 
         Five {
@@ -140,7 +140,7 @@ As such, those are in use within the default layer at this time.*/
         };
 
         Zero {
-            bindings = <&none>;
+            bindings = <&kp N0>;
             key-positions = <9 10>;
         };
     };
@@ -172,7 +172,7 @@ As such, those are in use within the default layer at this time.*/
             // | FUNC |  CTRL  |  LALT  |  LGUI  | LOWER  | SPACE  |                                      | SPACE  |  RAISE |  SLASH |  LEFT  |  DOWN  |  RIGHT |
 
             bindings = <
-&kp TAB              &kp Q         &kp W  &kp E            &kp R      &kp T      &kp Y      &kp U      &kp I                &kp O       &kp P           &kp BSPC
+&kp TAB              &mt N1 Q      &kp W  &kp E            &kp R      &kp T      &kp Y      &kp U      &kp I                &kp O       &mt N0 P        &kp BSPC
 &mt LEFT_ALT ESCAPE  &kp A         &kp S  &kp D            &kp F      &kp G      &kp H      &kp J      &kp K                &kp L       &mt SEMI COLON  &mt SQT SQT
 &kp LSHFT            &kp Z         &kp X  &kp C            &kp V      &kp B      &kp N      &kp M      &kp COMMA            &kp PERIOD  &kp UP          &mt RIGHT_SHIFT QUESTION
 &kp LEFT_CONTROL     &kp LEFT_WIN  &mo 3  &mt UNDER MINUS  &mo LOWER  &kp ENTER  &kp SPACE  &sl RAISE  &mt BACKSLASH SLASH  &kp LEFT    &kp DOWN        &kp RIGHT
