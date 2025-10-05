@@ -95,12 +95,6 @@ As such, those are in use within the default layer at this time.*/
             timeout-ms = <50>;
         };
 
-        Underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <0 1 2>;
-            timeout-ms = <50>;
-        };
-
         One {
             bindings = <&kp N1>;
             key-positions = <0 1>;
@@ -121,7 +115,7 @@ As such, those are in use within the default layer at this time.*/
 
         Four {
             bindings = <&kp N4>;
-            key-positions = <3 4>;
+            key-positions = <3 2 1>;
             timeout-ms = <150>;
         };
 
@@ -189,8 +183,7 @@ As such, those are in use within the default layer at this time.*/
             // | FUNC |  CTRL  |  LALT  |  LGUI  | LOWER  | SPACE  |                                      | SPACE  |  RAISE |  SLASH |  LEFT  |  DOWN  |  RIGHT |
 
             bindings = <
-&kp TAB              &kp Q         &kp W  &kp E            &kp R      &kp T      &kp Y      &kp U       &mt RS(I) I
-         &kp O       &kp P           &kp BSPC
+&kp TAB              &kp Q         &kp W  &kp E            &kp R      &kp T      &kp Y      &kp U      &mt RS(I) I          &kp O       &kp P           &kp BSPC
 &mt LEFT_ALT ESCAPE  &kp A         &kp S  &kp D            &kp F      &kp G      &kp H      &kp J      &kp K                &kp L       &mt SEMI COLON  &mt DOUBLE_QUOTES SQT
 &kp LSHFT            &kp Z         &kp X  &kp C            &kp V      &kp B      &kp N      &kp M      &kp COMMA            &kp PERIOD  &kp UP          &mt RIGHT_SHIFT QUESTION
 &kp LEFT_CONTROL     &kp LEFT_WIN  &mo 3  &mt UNDER MINUS  &mo LOWER  &kp ENTER  &kp SPACE  &sl RAISE  &mt BACKSLASH SLASH  &kp LEFT    &kp DOWN        &kp RIGHT
@@ -220,10 +213,10 @@ As such, those are in use within the default layer at this time.*/
             // |       |       |       |       |       |       |                                    |       |       |       | LT    | GT    | BOOT  |
 
             bindings = <
-&onenote   &kp EXCL  &kp AT    &kp HASH         &kp DOLLAR      &kp PRCNT        &kp CARET  &kp AMPS        &kp ASTRK   &kp LPAR  &kp RPAR  &kp DEL
-&trans     &trans    &trans    &kp LC(LA(DEL))  &mmv MOVE_UP    &trans           &kp EQUAL  &kp MINUS       &kp PLUS    &kp LBRC  &kp RBRC  &kp PIPE
-&kp LSHFT  &kp BSLH  &kp FSLH  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &kp UNDERSCORE  &kp TILDE2  &kp LBKT  &kp RBKT  &mkp LCLK
-&trans     &kp CAPS  &trans    &trans           &mo ADJUST      &trans           &trans     &trans          &trans      &kp LT    &kp GT    &bootloader
+&onenote   &kp EXCL  &kp AT    &kp HASH         &kp DOLLAR      &kp PRCNT        &kp CARET  &kp AMPS        &kp ASTRK  &kp LPAR  &kp RPAR  &kp DEL
+&trans     &trans    &trans    &kp LC(LA(DEL))  &mmv MOVE_UP    &trans           &kp EQUAL  &kp MINUS       &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
+&kp LSHFT  &kp BSLH  &kp FSLH  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &kp UNDERSCORE  &kp TILDE  &kp LBKT  &kp RBKT  &mkp LCLK
+&trans     &kp CAPS  &trans    &trans           &mo ADJUST      &trans           &trans     &trans          &trans     &kp LT    &kp GT    &bootloader
             >;
         };
 
