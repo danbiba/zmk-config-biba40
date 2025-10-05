@@ -33,7 +33,7 @@ As such, those are in use within the default layer at this time.*/
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
-            bindings = <&kp I &kp RS(I)>;
+            bindings = <&kp I &kp LS(I)>;
         };
     };
 
@@ -166,7 +166,7 @@ As such, those are in use within the default layer at this time.*/
             timeout-ms = <100>;
         };
     };
-
+};
     macros {
         onenote: onenote {
             compatible = "zmk,behavior-macro";
