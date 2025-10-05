@@ -116,19 +116,19 @@ As such, those are in use within the default layer at this time.*/
         Three {
             bindings = <&kp N3>;
             key-positions = <2 3>;
-            timeout-ms = <100>;
+            timeout-ms = <150>;
         };
 
         Four {
             bindings = <&kp N4>;
             key-positions = <3 4>;
-            timeout-ms = <100>;
+            timeout-ms = <150>;
         };
 
         Five {
             bindings = <&kp N5>;
             key-positions = <4 5>;
-            timeout-ms = <100>;
+            timeout-ms = <150>;
         };
 
         Six {
@@ -189,7 +189,8 @@ As such, those are in use within the default layer at this time.*/
             // | FUNC |  CTRL  |  LALT  |  LGUI  | LOWER  | SPACE  |                                      | SPACE  |  RAISE |  SLASH |  LEFT  |  DOWN  |  RIGHT |
 
             bindings = <
-&kp TAB              &kp Q         &kp W  &kp E            &kp R      &kp T      &kp Y      &kp U      &mt RS(I) I          &kp O       &kp P           &kp BSPC
+&kp TAB              &kp Q         &kp W  &kp E            &kp R      &kp T      &kp Y      &kp U      &mt RS(I) I { hold-tap-ms = <300>; };
+          &kp O       &kp P           &kp BSPC
 &mt LEFT_ALT ESCAPE  &kp A         &kp S  &kp D            &kp F      &kp G      &kp H      &kp J      &kp K                &kp L       &mt SEMI COLON  &mt DOUBLE_QUOTES SQT
 &kp LSHFT            &kp Z         &kp X  &kp C            &kp V      &kp B      &kp N      &kp M      &kp COMMA            &kp PERIOD  &kp UP          &mt RIGHT_SHIFT QUESTION
 &kp LEFT_CONTROL     &kp LEFT_WIN  &mo 3  &mt UNDER MINUS  &mo LOWER  &kp ENTER  &kp SPACE  &sl RAISE  &mt BACKSLASH SLASH  &kp LEFT    &kp DOWN        &kp RIGHT
