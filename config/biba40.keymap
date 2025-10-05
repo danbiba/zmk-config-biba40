@@ -30,10 +30,10 @@ As such, those are in use within the default layer at this time.*/
         my_i: my_i {
             compatible = "zmk,behavior-hold-tap";
             label = "MY_I";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
-            bindings = <&kp I>, <&kp RS(I)>;
+            bindings = <&kp I &kp RS(I)>;
         };
     };
 };
@@ -129,7 +129,7 @@ As such, those are in use within the default layer at this time.*/
 
         Four {
             bindings = <&kp N4>;
-            key-positions = <3 2 4>;
+            key-positions = <2 3 4>;
             timeout-ms = <150>;
         };
 
