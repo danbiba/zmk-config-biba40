@@ -32,111 +32,133 @@ As such, those are in use within the default layer at this time.*/
         ctrl-back {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <10 11>;
+            timeout-ms = <50>;
         };
 
         ctrl-delete {
             bindings = <&kp LC(DEL)>;
             key-positions = <9 10 11>;
+            timeout-ms = <50>;
         };
 
         LeftWord {
             bindings = <&kp LC(LEFT_ARROW)>;
             key-positions = <46 45>;
+            timeout-ms = <50>;
         };
 
         RightWord {
             bindings = <&kp LC(RIGHT)>;
             key-positions = <47 46>;
+            timeout-ms = <50>;
         };
 
         Home {
             bindings = <&kp LC(HOME)>;
             key-positions = <33 34>;
+            timeout-ms = <50>;
         };
 
         End {
             bindings = <&kp LC(END)>;
             key-positions = <34 35>;
+            timeout-ms = <50>;
         };
 
         EraseLine {
             bindings = <&EraseLine>;
             key-positions = <34 46>;
+            timeout-ms = <50>;
         };
 
         CtrlReturn {
             bindings = <&kp LC(RET)>;
             key-positions = <16 17>;
+            timeout-ms = <50>;
         };
 
         Copy {
             bindings = <&kp LC(C)>;
             key-positions = <28 29>;
+            timeout-ms = <50>;
         };
 
         Find {
             bindings = <&kp LC(F)>;
             key-positions = <18 19>;
+            timeout-ms = <50>;
         };
 
         Paste {
             bindings = <&kp LC(V)>;
             key-positions = <30 31>;
+            timeout-ms = <50>;
         };
 
         Underscore {
             bindings = <&kp UNDER>;
             key-positions = <0 1 2>;
+            timeout-ms = <50>;
         };
 
         One {
             bindings = <&kp N1>;
             key-positions = <0 1>;
+            timeout-ms = <100>;
         };
 
         Two {
             bindings = <&kp N2>;
             key-positions = <1 2>;
+            timeout-ms = <100>;
         };
 
         Three {
             bindings = <&kp N3>;
             key-positions = <2 3>;
+            timeout-ms = <100>;
         };
 
         Four {
             bindings = <&kp N4>;
             key-positions = <3 4>;
+            timeout-ms = <100>;
         };
 
         Five {
             bindings = <&kp N5>;
             key-positions = <4 5>;
+            timeout-ms = <100>;
         };
 
         Six {
             bindings = <&kp N6>;
             key-positions = <6 5>;
+            timeout-ms = <100>;
         };
 
         Seven {
             bindings = <&kp NUMBER_7>;
             key-positions = <7 6>;
+            timeout-ms = <100>;
         };
 
         Eight {
             bindings = <&kp NUMBER_8>;
             key-positions = <8 7>;
+            timeout-ms = <100>;
         };
 
         Nine {
             bindings = <&kp NUMBER_9>;
             key-positions = <9 8>;
+            timeout-ms = <100>;
         };
 
         Zero {
             bindings = <&kp N0>;
             key-positions = <9 10>;
+            timeout-ms = <100>;
         };
     };
 
