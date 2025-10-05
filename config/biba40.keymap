@@ -36,10 +36,7 @@ As such, those are in use within the default layer at this time.*/
             bindings = <&kp I &kp RS(I)>;
         };
     };
-};
 
-
-/ {
     combos {
         compatible = "zmk,combos";
 
