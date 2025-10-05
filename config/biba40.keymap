@@ -115,7 +115,7 @@ As such, those are in use within the default layer at this time.*/
 
         Four {
             bindings = <&kp N4>;
-            key-positions = <3 2 1>;
+            key-positions = <3 2 4>;
             timeout-ms = <150>;
         };
 
