@@ -138,25 +138,25 @@ As such, those are in use within the default layer at this time.*/
 
         Six {
             bindings = <&kp N6>;
-            key-positions = <6 5>;
+            key-positions = <5 6>;
             timeout-ms = <100>;
         };
 
         Seven {
-            bindings = <&kp NUMBER_7>;
-            key-positions = <7 6>;
+            bindings = <&kp N7>;
+            key-positions = <6 7>;
             timeout-ms = <100>;
         };
 
         Eight {
-            bindings = <&kp NUMBER_8>;
-            key-positions = <8 7>;
+            bindings = <&kp N8>;
+            key-positions = <7 8>;
             timeout-ms = <100>;
         };
 
         Nine {
-            bindings = <&kp NUMBER_9>;
-            key-positions = <9 8>;
+            bindings = <&kp N9>;
+            key-positions = <8 9>;
             timeout-ms = <100>;
         };
 
@@ -166,7 +166,7 @@ As such, those are in use within the default layer at this time.*/
             timeout-ms = <100>;
         };
     };
-};
+
     macros {
         onenote: onenote {
             compatible = "zmk,behavior-macro";
