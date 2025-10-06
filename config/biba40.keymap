@@ -176,16 +176,88 @@ As such, those are in use within the default layer at this time.*/
         OneHold: OneHold {
             compatible = "zmk,behavior-hold-tap";
             label = "ONEHOLD";
-            bindings = <&kp>, <&none>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
 
-        IHold: IHold {
+        TwoHold: TwoHold {
             compatible = "zmk,behavior-hold-tap";
-            label = "IHOLD";
-            bindings = <&kp>, <&none>;
+            label = "TWOHOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        ThreeHold: ThreeHold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THREEHOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        FourHold: FourHold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FOURHOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        FIveHold: FIveHold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FIVEHOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        SIxHold: SIxHold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SIXHOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        SevenHold: SevenHold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SEVENHOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        EIghtHold: EIghtHold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "EIGHTHOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        NIneHold: NIneHold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NINEHOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        ZeroHold: ZeroHold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ZEROHOLD";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -203,10 +275,10 @@ As such, those are in use within the default layer at this time.*/
             // | FUNC |  CTRL  |  LALT  |  LGUI  | LOWER  | SPACE  |                                      | SPACE  |  RAISE |  SLASH |  LEFT  |  DOWN  |  RIGHT |
 
             bindings = <
-&kp TAB              &OneHold KP_NUMBER_1 0  &kp W  &kp E            &kp R      &kp T      &kp Y      &kp U      &kp LS(I)            &kp O       &kp P           &kp BSPC
-&mt LEFT_ALT ESCAPE  &kp A                   &kp S  &kp D            &kp F      &kp G      &kp H      &kp J      &kp K                &kp L       &mt SEMI COLON  &mt DOUBLE_QUOTES SQT
-&kp LSHFT            &kp Z                   &kp X  &kp C            &kp V      &kp B      &kp N      &kp M      &kp COMMA            &kp PERIOD  &kp UP          &mt RIGHT_SHIFT QUESTION
-&kp LEFT_CONTROL     &kp LEFT_WIN            &mo 3  &mt UNDER MINUS  &mo LOWER  &kp ENTER  &kp SPACE  &sl RAISE  &mt BACKSLASH SLASH  &kp LEFT    &kp DOWN        &kp RIGHT
+&kp TAB              &OneHold KP_NUMBER_1 Q  &TwoHold KP_NUMBER_2 W  &ThreeHold KP_NUMBER_3 E  &FourHold KP_NUMBER_4 R  &FIveHold KP_NUMBER_5 T  &SIxHold KP_NUMBER_6 Y  &SevenHold KP_NUMBER_7 U  &EIghtHold KP_NUMBER_8 I  &NIneHold KP_NUMBER_9 O  &ZeroHold KP_N0 P  &kp BSPC
+&mt LEFT_ALT ESCAPE  &kp A                   &kp S                   &kp D                     &kp F                    &kp G                    &kp H                   &kp J                     &kp K                     &kp L                    &mt SEMI COLON     &mt DOUBLE_QUOTES SQT
+&kp LSHFT            &kp Z                   &kp X                   &kp C                     &kp V                    &kp B                    &kp N                   &kp M                     &kp COMMA                 &kp PERIOD               &kp UP             &mt RIGHT_SHIFT QUESTION
+&kp LEFT_CONTROL     &kp LEFT_WIN            &mo 3                   &mt UNDER MINUS           &mo LOWER                &kp ENTER                &kp SPACE               &sl RAISE                 &mt BACKSLASH SLASH       &kp LEFT                 &kp DOWN           &kp RIGHT
             >;
         };
 
