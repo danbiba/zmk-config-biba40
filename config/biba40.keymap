@@ -26,6 +26,16 @@ As such, those are in use within the default layer at this time.*/
 };
 
 / {
+
+    behaviors {
+        // Target the default mod-tap behavior
+        &mt {
+            // New default time in milliseconds (e.g., 250ms)
+            tapping-term-ms = <250>; 
+        };
+    };
+    
+
     combos {
         compatible = "zmk,combos";
 
@@ -112,15 +122,6 @@ As such, those are in use within the default layer at this time.*/
         };
     };
          
-        behaviors {
-        // Target the default mod-tap behavior
-        &mt {
-            // New default time in milliseconds (e.g., 250ms)
-            tapping-term-ms = <250>; 
-        };
-    };
-    
-
     keymap {
         compatible = "zmk,keymap";
 
