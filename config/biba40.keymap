@@ -228,7 +228,7 @@ As such, those are in use within the default layer at this time.*/
             // |          |          |          |          |          |          |                                          |          |          |          |          |          |          |
 
             bindings = <
-&bt BT_CLR   &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans        &trans        &trans        &trans        &soft_off
+&bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans        &trans        &trans        &trans        &soft_off
 &bt BT_NXT   &out OUT_TOG    &out OUT_USB  &out OUT_BLE  &trans        &trans        &trans      &trans        &trans        &trans        &trans        &trans
 &bt BT_PRV   &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &bootloader  &trans          &trans        &trans        &trans        &trans        &trans      &trans        &trans        &trans        &trans        &trans
