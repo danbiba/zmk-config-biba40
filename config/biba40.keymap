@@ -115,7 +115,7 @@ As such, those are in use within the default layer at this time.*/
 
         Four {
             bindings = <&kp N4>;
-            key-positions = <2 3 4>;
+            key-positions = <3 2 4>;
             timeout-ms = <150>;
         };
 
@@ -127,25 +127,25 @@ As such, those are in use within the default layer at this time.*/
 
         Six {
             bindings = <&kp N6>;
-            key-positions = <5 6>;
+            key-positions = <6 5>;
             timeout-ms = <100>;
         };
 
         Seven {
-            bindings = <&kp N7>;
-            key-positions = <6 7>;
+            bindings = <&kp NUMBER_7>;
+            key-positions = <7 6>;
             timeout-ms = <100>;
         };
 
         Eight {
-            bindings = <&kp N8>;
-            key-positions = <7 8>;
+            bindings = <&kp NUMBER_8>;
+            key-positions = <8 7>;
             timeout-ms = <100>;
         };
 
         Nine {
-            bindings = <&kp N9>;
-            key-positions = <8 9>;
+            bindings = <&kp NUMBER_9>;
+            key-positions = <9 8>;
             timeout-ms = <100>;
         };
 
@@ -172,98 +172,6 @@ As such, those are in use within the default layer at this time.*/
         };
     };
 
-    behaviors {
-        OneHold: OneHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ONEHOLD";
-            bindings = <&kp N1>, <&kp Q>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        TwoHold: TwoHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TWOHOLD";
-            bindings = <&kp N2>, <&kp W>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        ThreeHold: ThreeHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THREEHOLD";
-            bindings = <&kp N3>, <&kp E>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        FourHold: FourHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "FOURHOLD";
-            bindings = <&kp N4>, <&kp R>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        FiveHold: FiveHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "FIVEHOLD";
-            bindings = <&kp N5>, <&kp T>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        SixHold: SixHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SIXHOLD";
-            bindings = <&kp N6>, <&kp Y>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        SevenHold: SevenHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SEVENHOLD";
-            bindings = <&kp N7>, <&kp U>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        EightHold: EightHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "EIGHTHOLD";
-            bindings = <&kp N8>, <&kp I>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        NineHold: NineHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NINEHOLD";
-            bindings = <&kp N9>, <&kp O>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-
-        ZeroHold: ZeroHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ZEROHOLD";
-            bindings = <&kp N0>, <&kp P>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -275,10 +183,10 @@ As such, those are in use within the default layer at this time.*/
             // | FUNC |  CTRL  |  LALT  |  LGUI  | LOWER  | SPACE  |                                      | SPACE  |  RAISE |  SLASH |  LEFT  |  DOWN  |  RIGHT |
 
             bindings = <
-&kp TAB              &OneHold   &TwoHold   &ThreeHold   &FourHold   &FiveHold   &SixHold   &SevenHold   &EightHold   &NineHold   &ZeroHold   &kp BSPC
-&mt LEFT_ALT ESCAPE  &kp A                   &kp S                   &kp D                     &kp F                    &kp G                    &kp H                   &kp J                     &kp K                     &kp L                    &mt SEMI COLON     &mt DOUBLE_QUOTES SQT
-&kp LSHFT            &kp Z                   &kp X                   &kp C                     &kp V                    &kp B                    &kp N                   &kp M                     &kp COMMA                 &kp PERIOD               &kp UP             &mt RIGHT_SHIFT QUESTION
-&kp LEFT_CONTROL     &kp LEFT_WIN            &mo 3                   &mt UNDER MINUS           &mo LOWER                &kp ENTER                &kp SPACE               &sl RAISE                 &mt BACKSLASH SLASH       &kp LEFT                 &kp DOWN           &kp RIGHT
+&kp TAB              &kp Q         &kp W  &kp E            &kp R      &kp T      &kp Y      &kp U      &mt RS(I) I          &kp O       &kp P           &kp BSPC
+&mt LEFT_ALT ESCAPE  &kp A         &kp S  &kp D            &kp F      &kp G      &kp H      &kp J      &kp K                &kp L       &mt SEMI COLON  &mt DOUBLE_QUOTES SQT
+&kp LSHFT            &kp Z         &kp X  &kp C            &kp V      &kp B      &kp N      &kp M      &kp COMMA            &kp PERIOD  &kp UP          &mt RIGHT_SHIFT QUESTION
+&kp LEFT_CONTROL     &kp LEFT_WIN  &mo 3  &mt UNDER MINUS  &mo LOWER  &kp ENTER  &kp SPACE  &sl RAISE  &mt BACKSLASH SLASH  &kp LEFT    &kp DOWN        &kp RIGHT
             >;
         };
 
