@@ -275,7 +275,7 @@ As such, those are in use within the default layer at this time.*/
             // | FUNC |  CTRL  |  LALT  |  LGUI  | LOWER  | SPACE  |                                      | SPACE  |  RAISE |  SLASH |  LEFT  |  DOWN  |  RIGHT |
 
             bindings = <
-&kp TAB              &OneHold KP_NUMBER_1 Q  &TwoHold KP_NUMBER_2 W  &ThreeHold KP_NUMBER_3 E  &FourHold KP_NUMBER_4 R  &FIveHold KP_NUMBER_5 T  &SIxHold KP_NUMBER_6 Y  &SevenHold KP_NUMBER_7 U  &EIghtHold KP_NUMBER_8 I  &NIneHold KP_NUMBER_9 O  &ZeroHold KP_N0 P  &kp BSPC
+&kp TAB              &OneHold &kp N1 &kp Q  &TwoHold &kp N2 &kp mW  &ThreeHold &kp N3 &kp E  &FourHold &kp N4 &kp R  &FiveHold &kp N5 &kp T  &SixHold &kp N6 &kp Y  &SevenHold &kp N7 &kp U  &EightHold &kp N8 &kp I  &NineHold &kp N9 &kp O  &ZeroHold &kp N0 &kp P  &kp BSPC
 &mt LEFT_ALT ESCAPE  &kp A                   &kp S                   &kp D                     &kp F                    &kp G                    &kp H                   &kp J                     &kp K                     &kp L                    &mt SEMI COLON     &mt DOUBLE_QUOTES SQT
 &kp LSHFT            &kp Z                   &kp X                   &kp C                     &kp V                    &kp B                    &kp N                   &kp M                     &kp COMMA                 &kp PERIOD               &kp UP             &mt RIGHT_SHIFT QUESTION
 &kp LEFT_CONTROL     &kp LEFT_WIN            &mo 3                   &mt UNDER MINUS           &mo LOWER                &kp ENTER                &kp SPACE               &sl RAISE                 &mt BACKSLASH SLASH       &kp LEFT                 &kp DOWN           &kp RIGHT
