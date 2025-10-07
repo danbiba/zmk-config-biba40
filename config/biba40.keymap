@@ -176,7 +176,7 @@ As such, those are in use within the default layer at this time.*/
         OneHold: OneHold {
             compatible = "zmk,behavior-hold-tap";
             label = "ONEHOLD";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N1>, <&kp Q>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -185,7 +185,7 @@ As such, those are in use within the default layer at this time.*/
         TwoHold: TwoHold {
             compatible = "zmk,behavior-hold-tap";
             label = "TWOHOLD";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N2>, <&kp W>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -194,7 +194,7 @@ As such, those are in use within the default layer at this time.*/
         ThreeHold: ThreeHold {
             compatible = "zmk,behavior-hold-tap";
             label = "THREEHOLD";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N3>, <&kp E>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -203,25 +203,25 @@ As such, those are in use within the default layer at this time.*/
         FourHold: FourHold {
             compatible = "zmk,behavior-hold-tap";
             label = "FOURHOLD";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N4>, <&kp R>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
 
-        FIveHold: FIveHold {
+        FiveHold: FiveHold {
             compatible = "zmk,behavior-hold-tap";
             label = "FIVEHOLD";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N5>, <&kp T>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
 
-        SIxHold: SIxHold {
+        SixHold: SixHold {
             compatible = "zmk,behavior-hold-tap";
             label = "SIXHOLD";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N6>, <&kp Y>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -230,25 +230,25 @@ As such, those are in use within the default layer at this time.*/
         SevenHold: SevenHold {
             compatible = "zmk,behavior-hold-tap";
             label = "SEVENHOLD";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N7>, <&kp U>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
 
-        EIghtHold: EIghtHold {
+        EightHold: EightHold {
             compatible = "zmk,behavior-hold-tap";
             label = "EIGHTHOLD";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N8>, <&kp I>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
 
-        NIneHold: NIneHold {
+        NineHold: NineHold {
             compatible = "zmk,behavior-hold-tap";
             label = "NINEHOLD";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N9>, <&kp O>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -257,7 +257,7 @@ As such, those are in use within the default layer at this time.*/
         ZeroHold: ZeroHold {
             compatible = "zmk,behavior-hold-tap";
             label = "ZEROHOLD";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp N0>, <&kp P>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
