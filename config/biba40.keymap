@@ -94,66 +94,6 @@ As such, those are in use within the default layer at this time.*/
             key-positions = <30 31>;
             timeout-ms = <50>;
         };
-
-        One {
-            bindings = <&kp N1>;
-            key-positions = <0 1>;
-            timeout-ms = <100>;
-        };
-
-        Two {
-            bindings = <&kp N2>;
-            key-positions = <1 2>;
-            timeout-ms = <100>;
-        };
-
-        Three {
-            bindings = <&kp N3>;
-            key-positions = <2 3>;
-            timeout-ms = <150>;
-        };
-
-        Four {
-            bindings = <&kp N4>;
-            key-positions = <3 2 4>;
-            timeout-ms = <150>;
-        };
-
-        Five {
-            bindings = <&kp N5>;
-            key-positions = <4 5>;
-            timeout-ms = <150>;
-        };
-
-        Six {
-            bindings = <&kp N6>;
-            key-positions = <6 5>;
-            timeout-ms = <100>;
-        };
-
-        Seven {
-            bindings = <&kp NUMBER_7>;
-            key-positions = <7 6>;
-            timeout-ms = <100>;
-        };
-
-        Eight {
-            bindings = <&kp NUMBER_8>;
-            key-positions = <8 7>;
-            timeout-ms = <100>;
-        };
-
-        Nine {
-            bindings = <&kp NUMBER_9>;
-            key-positions = <9 8>;
-            timeout-ms = <100>;
-        };
-
-        Zero {
-            bindings = <&kp N0>;
-            key-positions = <9 10>;
-            timeout-ms = <100>;
-        };
     };
 
     macros {
