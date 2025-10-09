@@ -25,9 +25,7 @@ As such, those are in use within the default layer at this time.*/
     hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
 };
 
-&mt {
-    tapping-term-ms = <250>;
-};
+&mt { tapping-term-ms = <250>; };
 
 / {
     combos {
@@ -115,7 +113,7 @@ As such, those are in use within the default layer at this time.*/
             label = "ERASELINE";
         };
     };
-         
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -172,10 +170,10 @@ As such, those are in use within the default layer at this time.*/
             // |          |          |          |          |          |          |                                          |          |          |          |          |          |          |
 
             bindings = <
-&kp TAB      &kp N1          &kp N2        &kp N3        &kp NUMBER_4  &kp N5   &kp N6      &kp NUMBER_7  &kp N8        &kp N9        &kp N0        &kp K_BACK
-&bt BT_NXT   &out OUT_TOG    &out OUT_USB  &out OUT_BLE  &trans        &trans   &trans      &trans        &trans        &trans        &trans        &soft_off
-&bt BT_PRV   &bt BT_CLR_ALL  &trans        &trans        &trans        &trans   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&bootloader  &trans          &trans        &kp MINUS     &trans        &kp RET  &kp SPACE   &trans        &trans        &trans        &trans        &trans
+&kp TAB      &kp N1          &kp N2        &kp N3        &kp NUMBER_4  &kp N5     &kp N6      &kp NUMBER_7  &kp N8        &kp N9          &kp N0        &kp K_BACK
+&bt BT_NXT   &out OUT_TOG    &out OUT_USB  &out OUT_BLE  &trans        &soft_off  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
+&bt BT_PRV   &bt BT_CLR_ALL  &trans        &trans        &trans        &trans     &kp N       &kp M         &kp COMMA     &kp PERIOD      &kp UP_ARROW  &bt BT_SEL 4
+&bootloader  &trans          &trans        &kp MINUS     &trans        &kp RET    &kp SPACE   &trans        &trans        &kp LEFT_ARROW  &kp DOWN      &kp RIGHT
             >;
         };
 
