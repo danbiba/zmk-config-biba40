@@ -27,6 +27,17 @@ As such, those are in use within the default layer at this time.*/
 &mt { tapping-term-ms = <250>; };
 
 / {
+    behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-auto-shift";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>; // Time to hold for shifted state (adjust as needed)
+            // Optional: quick-tap-ms = <150>; // Prevents accidental shifts on fast taps
+            // Optional: retro-tap; // Outputs unshifted key if held but no other key pressed
+        };
+    };
+
+
     combos {
         compatible = "zmk,combos";
 
@@ -124,7 +135,7 @@ As such, those are in use within the default layer at this time.*/
             // | FUNC |  CTRL  |  LALT  |  LGUI  | LOWER  | SPACE  |                                      | SPACE  |  RAISE |  SLASH |  LEFT  |  DOWN  |  RIGHT |
 
             bindings = <
-&kp TAB              &kp Q         &kp W   &kp E            &kp R      &kp T      &kp Y      &kp U      &mt RS(I) I          &kp O       &kp P           &kp BSPC
+&kp TAB              &kas Q         &kp W   &kp E            &kp R      &kp T      &kp Y      &kp U      &mt RS(I) I          &kp O       &kp P           &kp BSPC
 &mt LEFT_ALT ESCAPE  &kp A         &kp S   &kp D            &kp F      &kp G      &kp H      &kp J      &kp K                &kp L       &mt SEMI COLON  &mt DOUBLE_QUOTES SQT
 &kp LSHFT            &kp Z         &kp X   &kp C            &kp V      &kp B      &kp N      &kp M      &kp COMMA            &kp PERIOD  &kp UP          &mt RIGHT_SHIFT QUESTION
 &kp LEFT_CONTROL     &kp LEFT_WIN  &tog 3  &mt UNDER MINUS  &mo LOWER  &kp ENTER  &kp SPACE  &sl RAISE  &mt BACKSLASH SLASH  &kp LEFT    &kp DOWN        &kp RIGHT
