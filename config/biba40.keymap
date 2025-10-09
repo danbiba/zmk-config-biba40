@@ -16,7 +16,7 @@
 #define ADJUST 3
 #define FUNCTION 4
 
-/* NOTE: At the time of the creation of this keymap, there are no specified codes for 'eisuu' and 'kana' input in ZMK.
+/* NOTE: At the time of the creation of thisxkeymap, there are no specified codes for 'eisuu' and 'kana' input in ZMK.
 However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'eisuu' input respectively.
 As such, those are in use within the default layer at this time.*/
 
