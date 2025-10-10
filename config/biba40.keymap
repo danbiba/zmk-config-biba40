@@ -16,8 +16,8 @@
 #define ADJUST 3
 #define FUNCTION 4
 
-/* Autoshift Macro */
-#define AS(keycode) &as LSFT keycode     // Autoshift Macro
+					 
+																  
 
 /* NOTE: At the time of the creation of thisxkeymap, there are no specified codes for 'eisuu' and 'kana' input in ZMK.
 However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'eisuu' input respectively.
@@ -27,19 +27,19 @@ As such, those are in use within the default layer at this time.*/
     hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
 };
 
-&mt { tapping-term-ms = <300>; };
+&mt { tapping-term-ms = <250>; };
 
 / {
-    behaviors {
-        as: auto_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <135>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
+			   
+						
+												 
+								 
+									
+							   
+									 
+									
+		  
+	  
 
  
         combos {
@@ -123,7 +123,7 @@ As such, those are in use within the default layer at this time.*/
         EraseLine: EraseLine {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LSFT END &kp DELETE>;
+            bindings = <&kp HOME &kp LS(END) &kp DELETE>;
             label = "ERASELINE";
         };
     };
@@ -139,7 +139,7 @@ As such, those are in use within the default layer at this time.*/
             // | FUNC |  CTRL  |  LALT  |  LGUI  | LOWER  | SPACE  |                                      | SPACE  |  RAISE |  SLASH |  LEFT  |  DOWN  |  RIGHT |
 
             bindings = <
-&kp TAB              &as Q         &as W   &kp E            &kp R      &kp T      &kp Y      &kp U      &as I          &kp O       &kp P           &kp BSPC
+&kp TAB              &kp Q         &kp W   &kp E            &kp R      &kp T      &kp Y      &kp U      &mt RS(I) I          &kp O       &kp P           &kp BSPC
 &mt LEFT_ALT ESCAPE  &kp A         &kp S   &kp D            &kp F      &kp G      &kp H      &kp J      &kp K                &kp L       &mt SEMI COLON  &mt DOUBLE_QUOTES SQT
 &kp LSHFT            &kp Z         &kp X   &kp C            &kp V      &kp B      &kp N      &kp M      &kp COMMA            &kp PERIOD  &kp UP          &mt RIGHT_SHIFT QUESTION
 &kp LEFT_CONTROL     &kp LEFT_WIN  &tog 3  &mt UNDER MINUS  &mo LOWER  &kp ENTER  &kp SPACE  &sl RAISE  &mt BACKSLASH SLASH  &kp LEFT    &kp DOWN        &kp RIGHT
