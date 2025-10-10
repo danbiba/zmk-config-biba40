@@ -27,21 +27,9 @@ As such, those are in use within the default layer at this time.*/
     hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
 };
 
-&mt { tapping-term-ms = <250>; };
+&mt { tapping-term-ms = <300>; };
 
 / {
-			   
-						
-												 
-								 
-									
-							   
-									 
-									
-		  
-	  
-
- 
         combos {
         compatible = "zmk,combos";
 
