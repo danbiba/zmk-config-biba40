@@ -22,10 +22,55 @@ However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'ei
 As such, those are in use within the default layer at this time.*/
 
 &soft_off {
-    hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
+    hold-time-ms = <3000>; // Only turn off if the key is held for 3 seconds or longer.
 };
 
-/ {
+/* -------------------------
+ * Auto Shift implementation
+ * -------------------------
+ * Use &as <KEY> anywhere:
+ *   tap = normal key, hold past tapping-term = SHIFTed (a→A, 1→!, -→_, ,→<, etc.)
+ */
+ / {
+    behaviors {
+        as_ht: autoshift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTOSHIFT_HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;    /* QMK-ish feel; raise to 200–220 if you want longer hold */
+            flavor = "tap-preferred";   /* closest to QMK Auto Shift */
+            bindings = <&shifted>, <&kp>;  /* hold = shifted (macro), tap = normal */
+        };
+    };
+
+    macros {
+        /* Press LSHIFT, tap the provided key, release LSHIFT */
+        shifted: macro_shifted_kp {
+            compatible = "zmk,behavior-macro-one-param";
+            label = "MACRO_SHIFTED_KP";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press &kp LSHFT>,
+                <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
+                <&macro_release &kp LSHFT>;
+        };
+
+        /* Convenience: &as KEY → autoshift(KEY) */
+        as: autoshift {
+            compatible = "zmk,behavior-macro-one-param";
+            label = "AUTOSHIFT_KP";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1>, <&macro_param_1to2>,
+                <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1>, <&macro_param_1to2>,
+                <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -37,10 +82,10 @@ As such, those are in use within the default layer at this time.*/
             // | FUNC |  CTRL  |  LALT  |  LGUI  | LOWER  | SPACE  |                                      | SPACE  |  RAISE |  SLASH |  LEFT  |  DOWN  |  RIGHT |
 
             bindings = <
-&kp ESC       &kp Q      &kp W     &kp E     &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O       &kp P     &kp BSPC
-&kp TAB       &kp A      &kp S     &kp D     &kp F      &kp G      &kp H      &kp J      &kp K      &kp L       &kp SEMI  &kp SQT
-&kp LSHFT     &kp Z      &kp X     &kp C     &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp UP    &kp ENTER
-&mo FUNCTION  &kp LCTRL  &kp LALT  &kp LGUI  &mo LOWER  &kp SPACE  &kp SPACE  &mo RAISE  &kp SLASH  &kp LEFT    &kp DOWN  &kp RIGHT
+&kp ESC       &as Q      &as W     &as E     &as R      &as T      &as Y      &as U      &as I      &as O       &as P     &kp BSPC
+&kp TAB       &as A      &as S     &as D     &as F      &as G      &as H      &as J      &as K      &as L       &as SEMI  &as SQT
+&kp LSHFT     &as Z      &as X     &as C     &as V      &as B      &as N      &as M      &as COMMA  &as PERIOD  &kp UP    &kp ENTER
+&mo FUNCTION  &kp LCTRL  &kp LALT  &kp LGUI  &mo LOWER  &kp SPACE  &kp SPACE  &mo RAISE  &as SLASH  &kp LEFT    &kp DOWN  &kp RIGHT
             >;
         };
 
@@ -52,9 +97,9 @@ As such, those are in use within the default layer at this time.*/
             // | BOOT |      |      |      |      |      |                                  |      |      |  0   |      |VOL D |      |
 
             bindings = <
-&kp GRAVE    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7      &kp N8  &kp N9  &kp N0        &kp BSPC
-&trans       &trans  &trans  &trans  &trans  &trans  &trans  &kp N4      &kp N5  &kp N6  &kp MINUS     &kp PLUS
-&trans       &trans  &trans  &trans  &trans  &trans  &trans  &kp N1      &kp N2  &kp N3  &kp C_VOL_UP  &kp ENTER
+&as GRAVE    &as N1  &as N2  &as N3  &as N4  &as N5  &as N6  &as N7      &as N8  &as N9  &as N0        &kp BSPC
+&trans       &trans  &trans  &trans  &trans  &trans  &trans  &as N4      &as N5  &as N6  &as MINUS     &kp PLUS
+&trans       &trans  &trans  &trans  &trans  &trans  &trans  &as N1      &as N2  &as N3  &kp C_VOL_UP  &kp ENTER
 &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &mo ADJUST  &kp N0  &trans  &kp C_VOL_DN  &trans
             >;
         };
