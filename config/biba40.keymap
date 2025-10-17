@@ -11,6 +11,14 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+
+// ---- Mouse movement/scroll max values (ceiling for acceleration) ----
+// Increase/decrease to taste. Typical defaults are ~600 move and ~10 scroll.
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
+#include <dt-bindings/zmk/pointing.h>
+
 #define DEFAULT 0
 #define LOWER  1
 #define RAISE  2
@@ -23,6 +31,18 @@ As such, those are in use within the default layer at this time.*/
 
 &soft_off {
     hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
+};
+
+// ---- Mouse acceleration behavior ----
+// Holds on &mmv / &msc will ramp to the max values above using this curve.
+&mmv {
+    time-to-max-speed-ms = <200>;   // 100–300 is common; lower = snappier
+    acceleration-exponent = <2>;    // 1 = linear-ish, 2 = more curved ramp
+};
+
+&msc {
+    time-to-max-speed-ms = <150>;   // optional for scroll acceleration
+    acceleration-exponent = <1>;
 };
 
 / {
