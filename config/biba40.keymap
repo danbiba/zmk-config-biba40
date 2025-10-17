@@ -31,12 +31,12 @@ As such, those are in use within the default layer at this time.*/
 
 // Mouse acceleration behavior (conservative: smooth but responsive)
 &mmv {
-    time-to-max-speed-ms = <1200>;  // ~1.2s to reach max
-    acceleration-exponent = <2>;    // balanced curve
+    time-to-max-speed-ms = <900>;  // ~1.2s to reach max
+    acceleration-exponent = <1>;    // balanced curve
 };
 
 &msc {
-    time-to-max-speed-ms = <900>;
+    time-to-max-speed-ms = <700>;
     acceleration-exponent = <1>;
 };
 
