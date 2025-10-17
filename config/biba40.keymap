@@ -9,10 +9,14 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
-// Mouse movement and scroll ceilings
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 18
+
+// ---- Mouse movement/scroll max values (ceiling for acceleration) ----
+// Increase/decrease to taste. Typical defaults are ~600 move and ~10 scroll.
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
 #include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
@@ -26,23 +30,22 @@ However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'ei
 As such, those are in use within the default layer at this time.*/
 
 &soft_off {
-    hold-time-ms = <3000>; // Only turn off if the key is held for 3 seconds or longer.
+    hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
 };
 
-// Mouse acceleration behavior
+// ---- Mouse acceleration behavior ----
+// Holds on &mmv / &msc will ramp to the max values above using this curve.
 &mmv {
-    time-to-max-speed-ms = <1500>;
-    acceleration-exponent = <3>;
-    trigger-period-ms = <12>;
+    time-to-max-speed-ms = <200>;   // 100–300 is common; lower = snappier
+    acceleration-exponent = <2>;    // 1 = linear-ish, 2 = more curved ramp
 };
 
 &msc {
-    time-to-max-speed-ms = <1200>;
-    acceleration-exponent = <2>;
-    trigger-period-ms = <12>;
+    time-to-max-speed-ms = <150>;   // optional for scroll acceleration
+    acceleration-exponent = <1>;
 };
 
- / {
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -110,13 +113,14 @@ As such, those are in use within the default layer at this time.*/
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  F1    |  F2   |  F3   |  F4   |  F5   |  F6   |                                      |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  |
             // |        |       |       |       |       |       |                                      |       |       |       |       |       |       |
-            // |        |       |       |       |       |       |                                      |       |       |SCRLUP | RCLK  |  UP   | LCLK  |
-            // |        |UNLOCK |       |       |       |       |                                      |       |       |SCRLDN |  LEFT |  DOWN | RIGHT |
+            // |        |       |       |       |       |       |                                      |       |       |       |       |  UP   |       |
+            // |        |       |       |       |       |       |                                      |       |       |       |  LEFT |  DOWN | RIGHT |
 
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_UP   &mkp RCLK   &mmv MOVE_UP   &mkp LCLK
-&trans  &studio_unlock  &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_DOWN &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp RCLK   &mmv MOVE_UP   &mkp LCLK
+&trans  &studio_unlock  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
             >;
         };
     };
