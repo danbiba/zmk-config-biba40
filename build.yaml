@@ -19,15 +19,15 @@
 ---
 include:
   # Left half: enable ZMK Studio
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: biba40_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
 
   # Right half: standard build (no Studio)
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: biba40_right
 
   # Optional: settings reset image
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
